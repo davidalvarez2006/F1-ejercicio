@@ -19,5 +19,16 @@ class F3 extends Monoplaza{
         return 30;
     }
 
+    public function otorgarPuntos($posicion, $vueltaRapida) {
+        $tablaPuntos = array(10, 8, 7, 6, 5, 4, 3, 2, 1);
+        $puntos = 0;
+
+        if (($posicion >= 1 && $posicion <= $this->getMaximoParrilla()) && $posicion <= count($tablaPuntos)) {
+            $puntos = $tablaPuntos[$posicion - 1];
+        }
+
+        $this->setPuntaje($this->getPuntaje() + $puntos);
+    }
+
 }
 ?>

@@ -56,5 +56,7 @@ abstract class Monoplaza{
 
     abstract protected function getMaximoParrilla();
 
+    abstract public function otorgarPuntos($posicion, $vueltaRapida);
+
 }
 ?>
