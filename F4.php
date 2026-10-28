@@ -19,6 +19,17 @@ class F4 extends Monoplaza{
         return 30;
     }
 
+    public function subirCategoria($academia_piloto) {
+        return new F3(
+            $this->getNombre(),
+            $this->getNacionalidad(),
+            $this->getDorsal(),
+            $this->getEscuderia(),
+            $this->getPuntaje(),
+            $academia_piloto
+        );
+    }
+
     public function otorgarPuntos($posicion, $vueltaRapida) {
         $tablaPuntos = array(25, 18, 15, 12, 10, 8, 6, 4, 2, 1);
         $puntos = 0;

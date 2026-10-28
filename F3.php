@@ -19,6 +19,17 @@ class F3 extends Monoplaza{
         return 30;
     }
 
+    public function subirCategoria($minimo_puntos_licencia) {
+        return new F2(
+            $this->getNombre(),
+            $this->getNacionalidad(),
+            $this->getDorsal(),
+            $this->getEscuderia(),
+            $this->getPuntaje(),
+            $minimo_puntos_licencia
+        );
+    }
+
     public function otorgarPuntos($posicion, $vueltaRapida) {
         $tablaPuntos = array(10, 8, 7, 6, 5, 4, 3, 2, 1);
         $puntos = 0;

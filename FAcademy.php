@@ -19,6 +19,17 @@ class FAcademy extends Monoplaza{
         return 18;
     }
 
+    public function subirCategoria($pais_categoria) {
+        return new F4(
+            $this->getNombre(),
+            $this->getNacionalidad(),
+            $this->getDorsal(),
+            $this->getEscuderia(),
+            $this->getPuntaje(),
+            $pais_categoria
+        );
+    }
+
     public function otorgarPuntos($posicion, $vueltaRapida) {
         $tablaPuntos = array(18, 15, 12, 10, 8, 6, 4, 2, 1, 0);
         $puntos = 0;
