@@ -23,11 +23,11 @@ class FAcademy extends Monoplaza{
         $tablaPuntos = array(18, 15, 12, 10, 8, 6, 4, 2, 1, 0);
         $puntos = 0;
 
-        if (($posicion >= 1 && $posicion <= $this->getMaximoParrilla()) && $posicion <= count($tablaPuntos)) {
+        if ($this->posicionValida($posicion) && $posicion <= count($tablaPuntos)) {
             $puntos = $tablaPuntos[$posicion - 1];
         }
 
-        if ($vueltaRapida && ($posicion >= 1 && $posicion <= $this->getMaximoParrilla()) && $posicion <= count($tablaPuntos)) {
+        if ($vueltaRapida && $this->posicionValida($posicion) && $posicion <= count($tablaPuntos)) {
             $puntos++;
         }
 

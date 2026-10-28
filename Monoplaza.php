@@ -54,6 +54,10 @@ abstract class Monoplaza{
         $this->puntaje = $puntaje;
     }
 
+    public function posicionValida($posicion) {
+        return $posicion >= 1 && $posicion <= $this->getMaximoParrilla();
+    }
+
     abstract protected function getMaximoParrilla();
 
     abstract public function otorgarPuntos($posicion, $vueltaRapida);

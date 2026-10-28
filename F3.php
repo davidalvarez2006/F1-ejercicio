@@ -23,7 +23,7 @@ class F3 extends Monoplaza{
         $tablaPuntos = array(10, 8, 7, 6, 5, 4, 3, 2, 1);
         $puntos = 0;
 
-        if (($posicion >= 1 && $posicion <= $this->getMaximoParrilla()) && $posicion <= count($tablaPuntos)) {
+        if ($this->posicionValida($posicion) && $posicion <= count($tablaPuntos)) {
             $puntos = $tablaPuntos[$posicion - 1];
         }
 
