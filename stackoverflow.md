@@ -36,8 +36,6 @@ if ($respuesta == false) {
 $envio = json_decode($respuesta);
 ?>
 
-<p>Estado: <?php echo htmlspecialchars($envio->shipment_status); ?></p>
-<p>Evento: <?php echo htmlspecialchars($envio->event_description); ?></p>
 ```
 
 `$_POST` recoge lo que escribió el cliente en el formulario. `$datos` prepara
